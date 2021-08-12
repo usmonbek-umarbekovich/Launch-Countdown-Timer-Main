@@ -1,31 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Launch countdown timer</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Launch countdown timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/328b47e409.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Main Countdown Section -->
+    <main class="showcase">
+      <h1>We're launching soon</h1>
+      <ul class="countdown">
+        <li class="countdown-item">
+          <div class="frame">
+            <p class="content days">00</p>
+          </div>
+          <p class="label">days</p>
+        </li>
+        <li class="countdown-item">
+          <div class="frame">
+            <p class="content hours">00</p>
+          </div>
+          <p class="label">hours</p>
+        </li>
+        <li class="countdown-item">
+          <div class="frame">
+            <p class="content minutes">00</p>
+          </div>
+          <p class="label">minutes</p>
+        </li>
+        <li class="countdown-item">
+          <div class="frame">
+            <p class="content seconds">00</p>
+          </div>
+          <p class="label">seconds</p>
+        </li>
+      </ul>
+    </main>
 
-  We're launching soon
+    <!-- Social Media Sites -->
+    <section class="social-container">
+      <ul class="social-items">
+        <li>
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/usmonbek-rustamov/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/usmonbek-umarbekovich" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
 
-  Days
-  Hours
-  Minutes
-  Seconds
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="open-form"><i class="fas fa-cog"></i></div>
+    <div class="input-form hidden">
+      <button class="close-form">&times;</button>
+      <form>
+        <div class="input-field">
+          <label for="days">days</label>
+          <input type="text" id="days" />
+        </div>
+        <div class="input-field">
+          <label for="hours">hours</label>
+          <input type="text" id="hours" />
+        </div>
+        <div class="input-field">
+          <label for="minutes">minutes</label>
+          <input type="text" id="minutes" />
+        </div>
+        <div class="input-field">
+          <label for="seconds">seconds</label>
+          <input type="text" id="seconds" />
+        </div>
+        <button type="submit" class="btn">start</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/usmonbek-umarbekovich"
+        target="_blank"
+        >Usmonbek Rustamov</a
+      >.
+    </footer> -->
+  </body>
 </html>
