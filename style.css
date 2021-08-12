@@ -1,0 +1,130 @@
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --text-color: hsl(0, 0%, 100%);
+  --dark-blue-1: hsl(236, 21%, 26%);
+  --dark-blue-2: hsl(235, 16%, 14%);
+  --dark-blue-3: hsl(234, 17%, 12%);
+}
+
+/* Main Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 12px;
+  background: url('./images/pattern-hills.svg') no-repeat center bottom/100% 20%,
+    url('./images/bg-stars.svg'), var(--dark-blue-3);
+  color: var(--text-color);
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+p,
+h1,
+label,
+button {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main Showcase */
+.showcase {
+  margin-top: 3.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.showcase .countdown {
+  display: flex;
+  gap: 3.3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown .countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.countdown-item .label {
+  opacity: 0.5;
+}
+
+.countdown-item .frame {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(
+    to bottom,
+    hsl(236, 21%, 26%, 0.75) 50%,
+    hsla(236, 21%, 26%) 50% 100%
+  );
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-item .frame::before,
+.countdown-item .frame::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--dark-blue-3);
+}
+
+.countdown-item .frame::after {
+  left: auto;
+  right: -7px;
+}
+
+.frame .content {
+  color: var(--soft-red);
+  font-size: 6rem;
+  letter-spacing: 0;
+}
+
+/* Input Form */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
