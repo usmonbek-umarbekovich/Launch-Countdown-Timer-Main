@@ -16,7 +16,7 @@
 
 body {
   font-family: 'Red Hat Text', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   background: url('./images/pattern-hills.svg') no-repeat center bottom/100% 20%,
     url('./images/bg-stars.svg'), var(--dark-blue-3);
   color: var(--text-color);
@@ -26,15 +26,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 p,
-h1,
+h2,
 label,
 button {
   text-transform: uppercase;
   letter-spacing: 10px;
+}
+
+i {
+  color: #fff;
+  opacity: 0.5;
+  transition: all .3s;
+}
+
+i:hover {
+  color: var(--soft-red);
 }
 
 li {
@@ -47,74 +56,201 @@ a {
 
 /* Main Showcase */
 .showcase {
-  margin-top: 3.8rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   gap: 5rem;
+  margin-top: 5rem;
 }
 
-.showcase .countdown {
+.showcase h2 {
+  font-size: 1.45rem;
+}
+
+.showcase .countdown-timer {
   display: flex;
-  gap: 3.3rem;
-  align-items: center;
-  justify-content: center;
+  gap: 3.5rem;
 }
 
-.countdown .countdown-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.countdown-item .label {
-  opacity: 0.5;
-}
-
-.countdown-item .frame {
-  position: relative;
+.countdown-timer .count-item {
   width: 160px;
   height: 160px;
-  background: linear-gradient(
-    to bottom,
-    hsl(236, 21%, 26%, 0.75) 50%,
-    hsla(236, 21%, 26%) 50% 100%
-  );
-  border-radius: 10px;
+  position: relative;
 
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.countdown-item .frame::before,
-.countdown-item .frame::after {
+.count-item::after,
+.count-item::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -7px;
+  left: -8px;
   transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--dark-blue-3);
+  z-index: 1;
 }
 
-.countdown-item .frame::after {
+.count-item::before {
   left: auto;
-  right: -7px;
+  right: -8px;
 }
 
-.frame .content {
-  color: var(--soft-red);
+.count-item .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card .top {
+  flex: 1;
+  background: #2c2c44;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .bottom {
+  flex: 1;
+  background: var(--dark-blue-1);
+  border-radius: 0 0 10px 10px;
+}
+
+.card p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   font-size: 6rem;
   letter-spacing: 0;
+  color: var(--soft-red);
+}
+
+.count-item .label {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-top: 185px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28vh;
+}
+
+.social-items {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.open-form {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.open-form:hover {
+  transform: rotate(90deg);
 }
 
 /* Input Form */
+.input-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  filter: blur(2px);
+  z-index: 2;
+}
+
+.input-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background:hsl(236, 21%, 26%);
+  opacity: 0.9;
+  padding: 1.5rem;
+  padding-top: 3rem;
+}
+
+.input-form .close-form {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.input-form .close-form:hover {
+  color: var(--soft-red)
+}
+
+.input-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+form .input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.input-field label {
+  color: var(--soft-red);
+}
+
+.input-field input {
+  width: 50%;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+form .btn {
+  background: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .5rem .7rem;
+  letter-spacing: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 7px;
+  transition: all 0.2s;
+}
+
+form .btn:hover {
+  background: var(--soft-red);
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
