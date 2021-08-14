@@ -200,7 +200,6 @@ a {
   color: hsl(228, 45%, 44%);
 }
 
-
 .open-form {
   position: absolute;
   top: 20px;
@@ -302,4 +301,30 @@ form .btn:hover {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+@keyframes flip-to-bottom {
+  0% {
+    transform: rotate3d(0);
+  }
+
+  50% {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+}
+
+@keyframes flip-to-top {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0);
+  }
 }
