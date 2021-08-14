@@ -16,6 +16,7 @@ class Timer {
   #secondElement;
 
   constructor() {
+    this.#openForm();
     btnOpenForm.addEventListener('click', this.#openForm);
     btnCloseForm.addEventListener('click', this.#closeForm);
     inputOverlay.addEventListener('click', this.#closeForm);
@@ -25,6 +26,7 @@ class Timer {
   #openForm() {
     inputOverlay.classList.remove('hidden');
     inputForm.classList.remove('hidden');
+    form.querySelector('#days').focus();
   }
   #closeForm() {
     inputOverlay.classList.add('hidden');

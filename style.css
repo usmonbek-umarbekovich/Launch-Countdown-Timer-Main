@@ -235,6 +235,7 @@ a {
   opacity: 0.9;
   padding: 1.5rem;
   padding-top: 3rem;
+  width: 330px;
   transition: all 0.3s;
 }
 
@@ -275,11 +276,11 @@ form .input-field {
 }
 
 .input-field input {
-  width: 30%;
+  width: 100px;
   font-family: inherit;
   font-size: 1.2rem;
-  outline: none;
   padding: 0.5rem 1rem;
+  outline: none;
   border: none;
   border-radius: 10px;
   text-align: center;
