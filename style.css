@@ -222,6 +222,7 @@ a {
   backdrop-filter: blur(2px);
   filter: blur(2px);
   z-index: 2;
+  transition: all 0.3s;
 }
 
 .input-form {
@@ -234,6 +235,7 @@ a {
   opacity: 0.9;
   padding: 1.5rem;
   padding-top: 3rem;
+  transition: all 0.3s;
 }
 
 .input-form .close-form {
@@ -273,13 +275,14 @@ form .input-field {
 }
 
 .input-field input {
-  width: 50%;
+  width: 30%;
   font-family: inherit;
   font-size: 1.2rem;
   outline: none;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 10px;
+  text-align: center;
 }
 
 form .btn {
