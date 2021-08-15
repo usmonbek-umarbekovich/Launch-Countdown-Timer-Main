@@ -485,6 +485,10 @@ form .btn:hover {
     bottom: -20px;
     letter-spacing: 2px;
   }
+
+  .input-form {
+    width: 95%;
+  }
 }
 
 @media (max-width: 320px) {
@@ -537,5 +541,25 @@ form .btn:hover {
 
   .social-container {
     display: none;
+  }
+
+  .input-form {
+    width: 350px;
+    padding-bottom: .5rem;
+  }
+
+  .input-form form {
+    padding: .5rem;
+    gap: 0.5rem;
+  }
+
+  form .input-field {
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 2rem;
+  }
+
+  .input-field label {
+    letter-spacing: 5px;
   }
 }
