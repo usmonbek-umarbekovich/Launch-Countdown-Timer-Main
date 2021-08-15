@@ -233,8 +233,7 @@ a {
   z-index: 10;
   background: hsl(236, 21%, 26%);
   opacity: 0.9;
-  padding: 1.5rem;
-  padding-top: 3rem;
+  padding: 3rem 1.5rem 2rem 1.5rem;
   width: 330px;
   transition: all 0.3s;
 }
@@ -330,5 +329,213 @@ form .btn:hover {
   }
   100% {
     transform: rotate3d(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .showcase .countdown-timer {
+    width: 40rem;
+  }
+
+  .count-item .card {
+    width: 8rem;
+  }
+
+  .card div {
+    height: 4rem;
+  }
+
+  .card div p {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase {
+    gap: 3.5rem;
+  }
+
+  .showcase h2 {
+    font-size: 1rem;
+  }
+
+  .showcase .countdown-timer {
+    width: 35rem;
+  }
+
+  .countdown-timer .count-item {
+    gap: 1rem;
+  }
+
+  .count-item .card {
+    width: 7rem;
+  }
+
+  .card div {
+    height: 3.5rem;
+  }
+
+  .card div p {
+    font-size: 4rem;
+  }
+
+  .count-item .label {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase .countdown-timer {
+    width: 30rem;
+  }
+
+  .count-item .card {
+    width: 6rem;
+  }
+
+  .card div {
+    height: 3rem;
+  }
+
+  .card div p {
+    font-size: 3.5rem;
+  }
+
+  .count-item .label {
+    letter-spacing: 5px;
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .showcase {
+    gap: 2.5rem;
+    margin-top: 6rem;
+  }
+
+  .showcase h2 {
+    font-size: 0.9rem;
+  }
+
+  .showcase .countdown-timer {
+    width: 25rem;
+  }
+
+  .count-item .card {
+    width: 5rem;
+  }
+
+  .card div {
+    height: 2.5rem;
+  }
+
+  .card div p {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .showcase {
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+
+  .showcase h2 {
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 7px;
+  }
+
+  .showcase .countdown-timer {
+    width: 22rem;
+  }
+
+  .count-item .card {
+    width: 4.5rem;
+  }
+
+  .card div {
+    height: 2.2rem;
+  }
+
+  .card div p {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .showcase .countdown-timer {
+    width: 19rem;
+  }
+
+  .count-item .card {
+    width: 4rem;
+  }
+
+  .card div {
+    height: 2rem;
+  }
+
+  .card div p {
+    font-size: 2rem;
+  }
+
+  .count-item .label {
+    position: absolute;
+    bottom: -20px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  .showcase h2 {
+    letter-spacing: 3px;
+  }
+
+  .showcase .countdown-timer {
+    width: 16rem;
+  }
+
+  .count-item .card {
+    width: 3.3rem;
+  }
+
+  .card div {
+    height: 1.5rem;
+  }
+
+  .card div p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .showcase .countdown-timer {
+    width: 15rem;
+  }
+}
+
+@media(min-height: 650px) {
+  .showcase {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+}
+
+@media(min-height: 1000px) {
+  .showcase {
+    margin-top: 10rem;
+    gap: 4rem;
+  }
+}
+
+@media(max-height: 450px) {
+  .showcase {
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+
+  .social-container {
+    display: none;
   }
 }
