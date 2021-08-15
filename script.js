@@ -9,7 +9,6 @@ class Timer {
   #dayCount;
   #hourCount;
   #minuteCount;
-  #secondCount;
   #dayElement;
   #hourElement;
   #minuteElement;
@@ -83,7 +82,6 @@ class Timer {
     if (second >= 0) {
       const timeFormatted = second.toString().padStart(2, '0');
       this.#flipCard(this.#secondElement, timeFormatted);
-      this.#secondCount = second;
     }
 
     // update minutes
