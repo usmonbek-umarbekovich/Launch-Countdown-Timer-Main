@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/usmonbek-umarbekovich/)
-- Live Site URL: [Live Site](https://www.usmonbek-calculator.netlify.com)
+- Solution URL: [Solution](https://github.com/usmonbek-umarbekovich/Launch-Countdown-Timer-Main)
+- Live Site URL: [Live Site](https://usmonbek-umarbekovich.github.io/Launch-Countdown-Timer-Main/)
 
 
 ## My process
