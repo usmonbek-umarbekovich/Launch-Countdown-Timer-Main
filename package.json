@@ -1,0 +1,36 @@
+{
+  "name": "launch-countdown-timer-main",
+  "version": "1.0.0",
+  "description": "A Timer with Animation",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmonbek-umarbekovich/Launch-Countdown-Timer-Main.git"
+  },
+  "keywords": [
+    "timer",
+    "css",
+    "javascript",
+    "html"
+  ],
+  "author": "Usmonbek Rustamov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmonbek-umarbekovich/Launch-Countdown-Timer-Main/issues"
+  },
+  "homepage": "https://github.com/usmonbek-umarbekovich/Launch-Countdown-Timer-Main#readme",
+  "browserslist": "> 0.25%, not dead",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.15.4"
+  }
+}
